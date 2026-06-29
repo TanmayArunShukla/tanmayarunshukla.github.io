@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tanmay Arun Shukla - Regulatory Affairs</title>
+<meta name="description" content="Tanmay Arun Shukla. Regulatory affairs, quality, compliance and consulting. Approval is built like a pyramid." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAFBF8; --paper:#FFFFFF;
+    --ink:#0D1712; --ink-2:#46544C; --muted:#828D84;
+    --green:#0B5C42; --green-2:#15805C; --mint:#27C08A;
+    --wash:#EEF4EF; --line:#E2EAE3; --line-2:#D2DDD3;
+    --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+    --serif:"Fraunces",Georgia,serif;
+    --maxw:1240px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:Inter,system-ui,sans-serif; line-height:1.55; -webkit-font-smoothing:antialiased; overflow-x:hidden}
+  h1,h2,h3,h4{font-family:var(--serif); font-weight:500; letter-spacing:-.012em; line-height:1.02; margin:0}
+  a{color:inherit; text-decoration:none}
+  .mono{font-family:var(--mono)}
+  ::selection{background:var(--green); color:#fff}
+  :focus-visible{outline:2px solid var(--green); outline-offset:3px; border-radius:3px}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important; animation:none!important; scroll-behavior:auto!important}}
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 clamp(20px,4vw,48px)}
+  .eyebrow{font-family:var(--mono); font-size:11.5px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:var(--green)}
+  .muted{color:var(--muted)}
+
+  /* NAV */
+  nav{position:fixed; top:0; left:0; right:0; z-index:60; transition:background .35s, border-color .35s; border-bottom:1px solid transparent}
+  nav.scrolled{background:rgba(250,251,248,.72); backdrop-filter:saturate(1.1) blur(10px); border-bottom-color:var(--line)}
+  .navin{max-width:var(--maxw); margin:0 auto; padding:16px clamp(20px,4vw,48px); display:flex; align-items:center; justify-content:space-between; gap:20px}
+  .brand{font-family:var(--serif); font-size:18px; font-weight:600; display:flex; align-items:center; gap:10px}
+  .brand .tri{width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:12px solid var(--green)}
+  .navlinks{display:flex; gap:26px; align-items:center}
+  .navlinks a{font-size:13px; color:var(--ink-2); font-weight:500; transition:color .2s}
+  .navlinks a:hover{color:var(--green)}
+  .status{font-family:var(--mono); font-size:11px; font-weight:500; color:var(--green); border:1px solid var(--line-2); border-radius:999px; padding:6px 12px; display:flex; align-items:center; gap:8px; background:var(--paper)}
+  .live{width:7px;height:7px;border-radius:50%;background:var(--mint); box-shadow:0 0 0 0 rgba(39,192,138,.5); animation:pulse 2.6s infinite}
+  @keyframes pulse{70%{box-shadow:0 0 0 7px rgba(39,192,138,0)}100%{box-shadow:0 0 0 0 rgba(39,192,138,0)}}
+  @media(max-width:880px){.navlinks a:not(.last){display:none}}
+
+  /* ASCENT */
+  #ascent{height:600vh; position:relative}
+  .sticky{position:sticky; top:0; height:100vh; display:grid; grid-template-columns:1.02fr .98fr; align-items:center; gap:24px}
+  .beats{position:relative; height:100%; padding-left:clamp(20px,4vw,48px)}
+  .beat{position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; padding-right:24px; opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); pointer-events:none}
+  .beat.show{opacity:1; transform:none; pointer-events:auto}
+  .beat .lbl{font-family:var(--mono); font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--green); margin-bottom:18px; display:flex; align-items:center; gap:12px; flex-wrap:wrap}
+  .beat .lbl .ix{color:var(--muted)}
+  .h1{font-family:var(--serif); font-weight:500; font-size:clamp(40px,6.4vw,82px); line-height:.98; letter-spacing:-.025em}
+  .h1 em{font-style:italic; color:var(--green)}
+  .tech{font-size:clamp(15px,1.5vw,17.5px); color:var(--ink-2); max-width:48ch; margin-top:26px; line-height:1.62}
+  .tech b{color:var(--ink); font-weight:600}
+  .cue{font-family:var(--mono); font-size:11.5px; color:var(--muted); letter-spacing:.05em; margin-top:34px; display:flex; align-items:center; gap:10px}
+  .cue .ln{width:42px; height:1px; background:var(--line-2); position:relative; overflow:hidden}
+  .cue .ln::after{content:""; position:absolute; inset:0; background:var(--green); transform:translateX(-100%); animation:slide 2.2s infinite}
+  @keyframes slide{50%{transform:translateX(0)}100%{transform:translateX(100%)}}
+  .beat .mtitle{font-family:var(--serif); font-size:clamp(30px,4.4vw,52px); font-weight:500; letter-spacing:-.02em; margin-top:2px}
+  .beat .mtitle .it{font-style:italic; color:var(--green)}
+  .beat .mbody{font-size:clamp(14.5px,1.4vw,16.5px); color:var(--ink-2); max-width:44ch; margin-top:18px; line-height:1.6}
+  .beat .mbody b{color:var(--ink); font-weight:600}
+  .beat .mtags{display:flex; flex-wrap:wrap; gap:7px; margin-top:22px}
+  .mtag{font-family:var(--mono); font-size:10.5px; color:var(--ink-2); background:var(--paper); border:1px solid var(--line); border-radius:7px; padding:4px 9px}
+  .vis{position:relative; height:100%}
+  #pyr{width:100%; height:100%; display:block; cursor:grab; touch-action:pan-y}
+  #pyr:active{cursor:grabbing}
+  .floor{position:absolute; left:50%; top:62%; width:54%; height:40px; transform:translateX(-50%); background:radial-gradient(ellipse at center, rgba(11,92,66,.16), transparent 70%); filter:blur(8px); z-index:-1}
+  .fallback{display:none; position:absolute; inset:0; place-items:center}
+  .progress{position:absolute; right:clamp(20px,4vw,48px); top:50%; transform:translateY(-50%); display:flex; flex-direction:column; gap:9px; z-index:5}
+  .progress span{width:6px; height:6px; border-radius:50%; background:var(--line-2); transition:background .3s, transform .3s}
+  .progress span.on{background:var(--green); transform:scale(1.5)}
+  @media(max-width:880px){
+    #ascent{height:540vh}
+    .sticky{grid-template-columns:1fr; grid-template-rows:1fr .9fr}
+    .beats{padding:0 20px; order:2}
+    .beat{padding-right:0; justify-content:flex-start; padding-top:8px}
+    .vis{order:1; min-height:38vh}
+    .h1{font-size:clamp(36px,10vw,56px)}
+    .progress{display:none}
+    .floor{top:70%}
+  }
+  body.flat #ascent{height:auto}
+  body.flat .sticky{position:static; height:auto; display:block; padding:120px 0 40px}
+  body.flat .vis{height:62vh; max-width:520px; margin:0 auto 30px}
+  body.flat .beats{height:auto; padding:0}
+  body.flat .beat{position:relative; inset:auto; opacity:1; transform:none; padding:42px 0; border-top:1px solid var(--line); pointer-events:auto}
+  body.flat .beat:first-child{border-top:none; padding-top:0}
+  body.flat .progress{display:none}
+
+  /* reveal */
+  .rv{opacity:0; transform:translateY(22px); transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1)}
+  .rv.in{opacity:1; transform:none}
+  .rv.d1{transition-delay:.07s}.rv.d2{transition-delay:.14s}.rv.d3{transition-delay:.21s}
+  body.flat .rv{opacity:1; transform:none}
+
+  /* SECTIONS */
+  section.blk{padding:clamp(60px,8vw,110px) 0; border-top:1px solid var(--line)}
+  .shead{max-width:760px; margin-bottom:clamp(36px,5vw,60px)}
+  .shead h2{font-size:clamp(30px,5vw,56px); font-weight:500; letter-spacing:-.025em; margin-top:16px; line-height:1.02}
+  .shead h2 em{font-style:italic; color:var(--green)}
+  .shead p{color:var(--ink-2); font-size:17px; margin-top:18px; max-width:56ch}
+
+  /* authorities */
+  .auth{display:grid; grid-template-columns:repeat(5,1fr); gap:14px}
+  .acard{border:1px solid var(--line); border-radius:16px; padding:24px 18px; background:var(--paper); transition:transform .25s, box-shadow .25s, border-color .25s}
+  .acard:hover{transform:translateY(-4px); border-color:var(--green); box-shadow:0 18px 40px -26px rgba(11,60,42,.4)}
+  .acard .code{font-family:var(--serif); font-weight:600; font-size:24px; letter-spacing:-.02em; color:var(--green)}
+  .acard .nm{font-size:12.5px; color:var(--ink); font-weight:600; margin-top:12px; line-height:1.35}
+  .acard .rg{font-family:var(--mono); font-size:10.5px; color:var(--muted); letter-spacing:.06em; text-transform:uppercase; margin-top:6px}
+  @media(max-width:880px){.auth{grid-template-columns:repeat(2,1fr)}}
+
+  /* roles */
+  .roles{display:flex; flex-wrap:wrap; gap:12px; margin-top:6px}
+  .role-pill{font-family:var(--serif); font-size:clamp(20px,3vw,30px); font-weight:500; padding:10px 22px; border:1px solid var(--line-2); border-radius:999px; transition:background .25s, color .25s, border-color .25s; cursor:default}
+  .role-pill:hover{background:var(--green); color:#fff; border-color:var(--green)}
+
+  /* WORK / projects */
+  .wfilter{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:36px}
+  .fchip{font-family:var(--mono); font-size:11.5px; font-weight:500; letter-spacing:.02em; border:1px solid var(--line-2); background:var(--paper); color:var(--ink-2); padding:7px 13px; border-radius:999px; cursor:pointer; transition:all .2s}
+  .fchip:hover{border-color:var(--green); color:var(--green)}
+  .fchip.on{background:var(--green); color:#fff; border-color:var(--green)}
+  .wgrid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px}
+  .pcard{border:1px solid var(--line); border-radius:18px; padding:26px; background:var(--paper); transition:transform .25s, box-shadow .25s, border-color .25s, opacity .3s; display:flex; flex-direction:column}
+  .pcard:hover{transform:translateY(-4px); border-color:var(--green); box-shadow:0 22px 50px -32px rgba(11,60,42,.45)}
+  .pcard.gone{display:none}
+  .ptop{display:flex; align-items:baseline; justify-content:space-between; gap:12px}
+  .pnum{font-family:var(--serif); font-size:20px; font-weight:600; color:var(--green)}
+  .pcat{font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); text-align:right}
+  .ptitle{font-family:var(--serif); font-size:21px; font-weight:500; letter-spacing:-.015em; margin:12px 0 0; line-height:1.12}
+  .pdesc{font-size:14px; color:var(--ink-2); margin-top:12px; line-height:1.55; flex:1}
+  .ptags{display:flex; flex-wrap:wrap; gap:6px; margin-top:16px}
+  .ptag{font-family:var(--mono); font-size:10px; color:var(--green-2); background:var(--wash); border-radius:6px; padding:3px 8px}
+  @media(max-width:760px){.wgrid{grid-template-columns:1fr}}
+
+  /* experience */
+  .exp{display:flex; flex-direction:column}
+  .exp-row{display:grid; grid-template-columns:200px 1fr; gap:28px; padding:28px 0; border-top:1px solid var(--line)}
+  .exp-row:first-child{border-top:none; padding-top:0}
+  .exp .when{font-family:var(--mono); font-size:12px; color:var(--muted); letter-spacing:.02em; padding-top:5px}
+  .exp .role{font-family:var(--serif); font-size:clamp(20px,2.4vw,26px); font-weight:500; letter-spacing:-.015em}
+  .exp .org{font-family:var(--mono); font-size:12px; color:var(--green-2); margin:5px 0 14px}
+  .exp ul{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:9px}
+  .exp li{position:relative; padding-left:18px; font-size:14.5px; color:var(--ink-2); line-height:1.55}
+  .exp li::before{content:""; position:absolute; left:0; top:8px; width:6px; height:6px; border:1.4px solid var(--green); border-radius:50%}
+  .exp li b{color:var(--ink); font-weight:600}
+  @media(max-width:760px){.exp-row{grid-template-columns:1fr; gap:8px}}
+
+  /* leadership */
+  .lead{display:grid; grid-template-columns:1.4fr 1fr; gap:20px; align-items:stretch}
+  .lcard{border:1px solid var(--line); border-radius:20px; padding:clamp(26px,3.2vw,38px); background:var(--paper); transition:transform .25s, box-shadow .25s}
+  .lcard.feat{background:linear-gradient(160deg,#0B2018,#0D2A1F); color:#EAF2EC; border-color:#13352A}
+  .lcard:hover{transform:translateY(-4px); box-shadow:0 26px 60px -34px rgba(11,60,42,.5)}
+  .lcard .ld-role{font-family:var(--serif); font-size:clamp(22px,2.6vw,30px); font-weight:500; letter-spacing:-.02em}
+  .lcard.feat .ld-role{color:#fff}
+  .lcard .ld-org{font-family:var(--mono); font-size:12px; margin:8px 0 18px; color:var(--green-2)}
+  .lcard.feat .ld-org{color:var(--mint)}
+  .lcard p{margin:0; font-size:14.5px; color:var(--ink-2); line-height:1.6}
+  .lcard.feat p{color:#B8C7BD}
+  .lcard ul{margin:14px 0 0; padding:0; list-style:none; display:flex; flex-direction:column; gap:9px}
+  .lcard li{position:relative; padding-left:18px; font-size:14px; line-height:1.5; color:#C6D3CA}
+  .lcard li::before{content:""; position:absolute; left:0; top:8px; width:6px; height:6px; border-radius:50%; background:var(--mint)}
+  .lcard li b{color:#fff; font-weight:600}
+  .lcard.plain li{color:var(--ink-2)} .lcard.plain li::before{background:var(--green)} .lcard.plain li b{color:var(--ink)}
+  .statrow{display:flex; gap:28px; flex-wrap:wrap; margin-top:24px; padding-top:22px; border-top:1px solid rgba(255,255,255,.12)}
+  .st .n{font-family:var(--serif); font-size:30px; font-weight:600; letter-spacing:-.02em; color:#fff}
+  .st .l{font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:#8FA396; margin-top:2px}
+  @media(max-width:880px){.lead{grid-template-columns:1fr}}
+
+  /* capabilities */
+  .caps{display:grid; grid-template-columns:repeat(4,1fr); gap:0; border-top:1px solid var(--line)}
+  .cap{padding:26px 22px 26px 0; border-right:1px solid var(--line)}
+  .cap:last-child{border-right:none; padding-right:0}
+  .cap h4{font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--green); margin:0 0 14px; font-weight:500}
+  .cap ul{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:9px}
+  .cap li{font-size:14px; color:var(--ink-2)}
+  @media(max-width:880px){.caps{grid-template-columns:1fr 1fr}.cap{border-right:none; border-bottom:1px solid var(--line); padding:22px 0}}
+
+  /* recognition */
+  .rec{display:grid; grid-template-columns:repeat(4,1fr); gap:20px}
+  .rec .item{border-top:2px solid var(--green); padding-top:18px}
+  .rec .big{font-family:var(--serif); font-size:clamp(36px,5vw,58px); font-weight:500; letter-spacing:-.03em; line-height:1}
+  .rec .lab{font-size:13.5px; color:var(--ink-2); margin-top:10px}
+  @media(max-width:680px){.rec{grid-template-columns:1fr 1fr; gap:26px 20px}}
+
+  /* contact */
+  .contact{background:linear-gradient(160deg,#0B2018,#0E2C20); color:#EAF2EC; border-radius:28px; padding:clamp(40px,7vw,88px); position:relative; overflow:hidden; margin:clamp(40px,6vw,64px) 0}
+  .contact .ring{position:absolute; border-radius:50%; pointer-events:none}
+  .contact .r1{right:-120px; top:-120px; width:420px; height:420px; border:1px solid rgba(255,255,255,.07)}
+  .contact .r2{right:-40px; top:-40px; width:280px; height:280px; border:1px dashed rgba(39,192,138,.25)}
+  .contact .eyebrow{color:var(--mint)}
+  .contact h2{font-family:var(--serif); font-size:clamp(32px,5.5vw,60px); font-weight:500; color:#fff; letter-spacing:-.025em; margin:16px 0 0; max-width:16ch; line-height:1.02}
+  .contact h2 em{font-style:italic; color:var(--mint)}
+  .contact .sub{color:#AEBDB2; max-width:50ch; margin:20px 0 36px; font-size:16.5px; position:relative}
+  .cgrid{display:flex; gap:clamp(22px,4vw,46px); flex-wrap:wrap; position:relative}
+  .cgrid a{display:flex; flex-direction:column; gap:4px}
+  .cgrid .ck{font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:#7E9085}
+  .cgrid .cv{font-size:clamp(15px,1.8vw,18px); font-weight:600; color:#fff; transition:color .2s}
+  .cgrid a:hover .cv{color:var(--mint)}
+
+  footer{border-top:1px solid var(--line); padding:28px 0 56px}
+  .foot{display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; font-family:var(--mono); font-size:11px; color:var(--muted); letter-spacing:.05em}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="navin">
+    <a href="#top" class="brand"><span class="tri"></span> Tanmay Arun Shukla</a>
+    <div class="navlinks">
+      <a href="#work">Work</a>
+      <a href="#authorities">Authorities</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#contact" class="last">Contact</a>
+    </div>
+    <div class="status"><span class="live"></span> Open to roles</div>
+  </div>
+</nav>
+
+<!-- ASCENT -->
+<section id="ascent" aria-label="The submission, module by module">
+  <div class="sticky" id="top">
+    <div class="beats">
+
+      <div class="beat show" data-beat="0">
+        <div class="lbl">Tanmay Arun Shukla <span class="ix">· Regulatory · Quality · Compliance · Consulting</span></div>
+        <h1 class="h1">Approval is built<br>like a <em>pyramid.</em></h1>
+        <p class="tech">The Great Pyramid: 2.3 million blocks, two decades of work. A New Drug Application: often a quarter-million pages across five CTD modules, a decade or more under review. Both rise the same way. Block by block, layer by layer, and nothing reaches the top until everything beneath it holds.</p>
+        <div class="cue"><span class="ln"></span> Scroll to ascend the five modules</div>
+      </div>
+
+      <div class="beat" data-beat="1">
+        <div class="lbl"><span class="ix">Module 01</span> Administrative &amp; Standing</div>
+        <h2 class="mtitle">The <span class="it">foundation</span> course.</h2>
+        <p class="mbody"><b>MS Regulatory Affairs, Northeastern</b>, GPA 4.00, with a <b>Bachelor of Pharmacy</b> underneath it, so I read a dossier as a scientist, not just a filer. Certified through Stanford's AI in Healthcare specialization and US food-regulation programs. Boston based, ready to relocate.</p>
+        <div class="mtags"><span class="mtag">MS Reg Affairs · 4.00</span><span class="mtag">B.Pharm</span><span class="mtag">Stanford · AI in Healthcare</span></div>
+      </div>
+
+      <div class="beat" data-beat="2">
+        <div class="lbl"><span class="ix">Module 02</span> Overview &amp; Summary</div>
+        <h2 class="mtitle">The <span class="it">executive</span> read.</h2>
+        <p class="mbody">Three pharma and CRO internships across submissions, pharmacovigilance, quality, and regulatory strategy. I turn scientific and regulatory complexity into clear, defensible arguments, whether that is a query response, an executive deck, or a competitive-intelligence brief.</p>
+        <div class="mtags"><span class="mtag">3 internships</span><span class="mtag">Multi-agency</span><span class="mtag">Strategy &amp; intelligence</span></div>
+      </div>
+
+      <div class="beat" data-beat="3">
+        <div class="lbl"><span class="ix">Module 03</span> Quality · Chemistry, Manufacturing &amp; Controls</div>
+        <h2 class="mtitle">Where molecule <span class="it">meets</span> paperwork.</h2>
+        <p class="mbody">Compiled <b>eCTD Module 3</b> and <b>DMF Type II</b> documentation for API projects, organizing 30+ CMC documents across Modules 2.3 and 3.2 with container-closure and stability per <b>ICH Q1A to Q1E</b>. Drafted 10+ FDA CMC deficiency responses and audited a real NDA CTD for conformance.</p>
+        <div class="mtags"><span class="mtag">eCTD Module 3</span><span class="mtag">ICH Q-series</span><span class="mtag">DMF Type II</span><span class="mtag">NDA CTD audit</span></div>
+      </div>
+
+      <div class="beat" data-beat="4">
+        <div class="lbl"><span class="ix">Module 04</span> Evidence, Audit &amp; Data Integrity</div>
+        <h2 class="mtitle">The <span class="it">supporting</span> record.</h2>
+        <p class="mbody">Tracked <b>15+ change control and CAPA records</b> and reconciled 20+ deviation records across 5+ audits per 21 CFR 210/211. Led a nonprofit compliance audit of <b>27 findings across 4 severity tiers</b> and authored an <b>AI governance policy</b> that turned them into controls, all on ALCOA+ discipline.</p>
+        <div class="mtags"><span class="mtag">CAPA</span><span class="mtag">ALCOA+</span><span class="mtag">Compliance audit</span><span class="mtag">AI governance</span></div>
+      </div>
+
+      <div class="beat" data-beat="5">
+        <div class="lbl"><span class="ix">Module 05</span> Clinical &amp; Safety</div>
+        <h2 class="mtitle">Closest to the <span class="it">patient.</span></h2>
+        <p class="mbody">Designed a <b>13-section informed consent form</b> for a Phase III Alzheimer's trial (NCT04243577) under <b>21 CFR Part 50</b> and <b>ICH E6(R2)</b> at Flesch-Kincaid Grade 8. QC-checked pharmacovigilance case documentation against <b>ICH E2B(R3)</b> and MedDRA across CRO safety projects.</p>
+        <div class="mtags"><span class="mtag">21 CFR Part 50</span><span class="mtag">ICH E6(R2)</span><span class="mtag">ICH E2B(R3)</span><span class="mtag">MedDRA</span></div>
+      </div>
+
+    </div>
+
+    <div class="vis">
+      <div class="floor"></div>
+      <canvas id="pyr" aria-label="Interactive 3D Common Technical Document pyramid that rotates as you scroll and tilts toward your cursor"></canvas>
+      <div class="fallback" id="fallback"></div>
+    </div>
+
+    <div class="progress" aria-hidden="true">
+      <span data-p="0" class="on"></span><span data-p="1"></span><span data-p="2"></span><span data-p="3"></span><span data-p="4"></span><span data-p="5"></span>
+    </div>
+  </div>
+</section>
+
+<!-- AUTHORITIES -->
+<section class="blk" id="authorities">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="eyebrow">Jurisdiction</div>
+      <h2>Cleared across <em>five authorities.</em></h2>
+      <p>Submissions and query responses prepared across the agencies that decide whether a product ships.</p>
+    </div>
+    <div class="auth">
+      <div class="acard rv"><div class="code">FDA</div><div class="nm">U.S. Food &amp; Drug Administration</div><div class="rg">United States</div></div>
+      <div class="acard rv d1"><div class="code">EMA</div><div class="nm">European Medicines Agency</div><div class="rg">European Union</div></div>
+      <div class="acard rv d1"><div class="code">Health Canada</div><div class="nm">Health Canada</div><div class="rg">Canada</div></div>
+      <div class="acard rv d2"><div class="code">PMDA</div><div class="nm">Pharmaceuticals &amp; Medical Devices Agency</div><div class="rg">Japan</div></div>
+      <div class="acard rv d2"><div class="code">NMPA</div><div class="nm">National Medical Products Administration</div><div class="rg">China</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ROLES -->
+<section class="blk" id="roles">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="eyebrow">Open to</div>
+      <h2>Built for the work that <em>holds up.</em></h2>
+      <p>Looking for roles where structure, evidence, and clear writing decide the outcome:</p>
+    </div>
+    <div class="roles rv d1">
+      <span class="role-pill">Regulatory Affairs</span>
+      <span class="role-pill">Compliance</span>
+      <span class="role-pill">Consulting</span>
+      <span class="role-pill">Quality Management</span>
+    </div>
+  </div>
+</section>
+
+<!-- SELECTED WORK -->
+<section class="blk" id="work">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="eyebrow">Selected work · Project pool</div>
+      <h2>Eight problems, eight <em>pathways.</em></h2>
+      <p>Regulatory strategy projects spanning drugs, devices, biologics, and quality systems. Filter by focus.</p>
+    </div>
+
+    <div class="wfilter rv" role="group" aria-label="Filter projects by focus">
+      <button class="fchip on" data-f="all">All</button>
+      <button class="fchip" data-f="clinical">Clinical &amp; GCP</button>
+      <button class="fchip" data-f="combination">Combination</button>
+      <button class="fchip" data-f="earlydev">Early development</button>
+      <button class="fchip" data-f="device">Device &amp; SaMD</button>
+      <button class="fchip" data-f="biologics">Biologics &amp; CGT</button>
+      <button class="fchip" data-f="qa">QA &amp; CAPA</button>
+      <button class="fchip" data-f="labeling">Labeling</button>
+      <button class="fchip" data-f="cmc">CMC &amp; NDA</button>
+    </div>
+
+    <div class="wgrid rv d1">
+      <div class="pcard" data-cat="clinical">
+        <div class="ptop"><span class="pnum">P1</span><span class="pcat">Clinical · GCP · IRB</span></div>
+        <div class="ptitle">Informed Consent Form, Phase III Alzheimer's</div>
+        <div class="pdesc">A 13-section ICF for TRONTIER 1 (NCT04243577) under 21 CFR Part 50, ICH E6(R2), and OHRP, with a 12-category disclosure checklist to confirm site-activation readiness at Flesch-Kincaid Grade 8.</div>
+        <div class="ptags"><span class="ptag">21 CFR Part 50</span><span class="ptag">ICH E6(R2)</span><span class="ptag">OHRP</span></div>
+      </div>
+      <div class="pcard" data-cat="combination">
+        <div class="ptop"><span class="pnum">P2</span><span class="pcat">Combination · Design control</span></div>
+        <div class="ptitle">QMS &amp; Design Control, Dual-Chamber Injectable</div>
+        <div class="pdesc">Studied 21 CFR Part 4 coordination of drug cGMP and device design controls, ran ISO 14971 risk analysis identifying 6 to 8 critical points, and built a 25-link traceability matrix for a combination product.</div>
+        <div class="ptags"><span class="ptag">21 CFR Part 4</span><span class="ptag">21 CFR 820.30</span><span class="ptag">ISO 14971</span></div>
+      </div>
+      <div class="pcard" data-cat="earlydev">
+        <div class="ptop"><span class="pnum">P3</span><span class="pcat">Early dev · IND · NDA</span></div>
+        <div class="ptitle">Regulatory Strategy, 12 Novel Candidates</div>
+        <div class="pdesc">Designed an FDA-compliant framework for 12 oncology and CNS candidates, evaluating 505(b)(1) NDA pathways, IND requirements, and Target Product Profile criteria, with pre-IND strategy across FDA, EMA, and PMDA.</div>
+        <div class="ptags"><span class="ptag">505(b)(1)</span><span class="ptag">IND</span><span class="ptag">TPP</span></div>
+      </div>
+      <div class="pcard" data-cat="device">
+        <div class="ptop"><span class="pnum">P4</span><span class="pcat">Device · SaMD · Digital</span></div>
+        <div class="ptitle">Pathway Analysis, iCGM &amp; SaMD Ecosystem</div>
+        <div class="pdesc">Compared 510(k) and De Novo selection criteria, reviewed predicates under 21 CFR 862.1355 and FDA's Multiple Function Device guidance, and analyzed iCGM Special Controls including MARD and 15/15 and 20/20 metrics per ISO 62366-1.</div>
+        <div class="ptags"><span class="ptag">510(k)</span><span class="ptag">De Novo</span><span class="ptag">ISO 62366-1</span></div>
+      </div>
+      <div class="pcard" data-cat="biologics">
+        <div class="ptop"><span class="pnum">P5</span><span class="pcat">Biologics · CGT · CBER</span></div>
+        <div class="ptitle">Automated Cell-Processing, CDRH to CBER</div>
+        <div class="pdesc">Examined PMOA under 21 CFR Part 3 for an automated cell-processing platform, reviewed autologous CGT CMC with chain-of-identity controls at 99.9% traceability, and assessed ICH Q5E comparability with IEC 62304 Class C software controls.</div>
+        <div class="ptags"><span class="ptag">21 CFR Part 3</span><span class="ptag">ICH Q5E</span><span class="ptag">CGT CMC</span></div>
+      </div>
+      <div class="pcard" data-cat="qa">
+        <div class="ptop"><span class="pnum">P6</span><span class="pcat">QA · CAPA · GMP</span></div>
+        <div class="ptitle">Simulated CAPA, GMP Quality Systems</div>
+        <div class="pdesc">Ran a simulated CAPA for a GMP documentation gap using Fishbone and 5 Whys root-cause analysis, defined corrective and preventive actions, and verified effectiveness under 21 CFR 820.100 and ISO 13485.</div>
+        <div class="ptags"><span class="ptag">CAPA</span><span class="ptag">21 CFR 820</span><span class="ptag">ISO 13485</span></div>
+      </div>
+      <div class="pcard" data-cat="labeling">
+        <div class="ptop"><span class="pnum">P7</span><span class="pcat">Labeling · Lifecycle</span></div>
+        <div class="ptitle">Labeling Compliance &amp; Global Frameworks</div>
+        <div class="pdesc">Mapped US label elements under 21 CFR Part 101 for ANDA and NDA submissions, evaluated FDA, EMA, and ICH E3/E6 harmonization, and built a labeling lifecycle framework aligned to CBE-0, CBE-30, and PAS pathways.</div>
+        <div class="ptags"><span class="ptag">21 CFR Part 101</span><span class="ptag">CBE-30</span><span class="ptag">Lifecycle</span></div>
+      </div>
+      <div class="pcard" data-cat="cmc">
+        <div class="ptop"><span class="pnum">P8</span><span class="pcat">CMC · NDA · RIM</span></div>
+        <div class="ptitle">CMC Conformance &amp; Lifecycle Intelligence</div>
+        <div class="pdesc">Audited a real NDA CTD Module 3 against ICH Q-series, classified Post-Approval Change categories, and built a searchable compliance reference with metadata tagging plus a CBE-0, CBE-30, and PAS decision matrix across FDA and EMA.</div>
+        <div class="ptags"><span class="ptag">CTD Module 3</span><span class="ptag">ICH Q-series</span><span class="ptag">PAC · RIM</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="blk" id="experience">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="eyebrow">Experience · On the record</div>
+      <h2>Where the work was <em>done.</em></h2>
+    </div>
+    <div class="exp">
+      <div class="exp-row rv">
+        <div class="when">Apr 2026 - Jun 2026</div>
+        <div>
+          <div class="role">Team Lead, Strategic Planning &amp; Compliance</div>
+          <div class="org">The Sturge-Weber Foundation · Remote</div>
+          <ul>
+            <li>Led strategic planning for a rare-disease nonprofit, building <b>grant templates and a business plan</b> with funding-pathway analysis and reviewing legal documents for compliance.</li>
+            <li>Directed a compliance audit classifying <b>27 findings across 4 severity tiers</b> and authored an AI governance and responsible-use policy that converted findings into controls.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-row rv">
+        <div class="when">Mar 2025 - Aug 2025</div>
+        <div>
+          <div class="role">Regulatory Affairs &amp; Strategy Intern</div>
+          <div class="org">Symbiotec Pharma Labs &amp; Knovea Pharmaceutical · Indore, India</div>
+          <ul>
+            <li>Compiled <b>eCTD and ANDA</b> lifecycle documentation across US, EU, Japan, and China markets, organizing 30+ CMC documents across Modules 2.3 and 3.2 and supporting <b>DMF Type II</b> activities.</li>
+            <li>Drafted <b>10+ regulatory query responses</b> to FDA CMC deficiency letters across 3 concurrent projects, and analyzed 60+ lifecycle documents, flagging labeling and stability gaps.</li>
+            <li>Monitored competitor portfolios, patent timelines, and FDA/EMA milestones, delivering weekly <b>competitive-intelligence summaries</b> for commercial positioning.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-row rv">
+        <div class="when">Jan 2024 - Mar 2025</div>
+        <div>
+          <div class="role">Medical Writing &amp; Regulatory Operations Intern</div>
+          <div class="org">VigiSolvo (ThePharmaDaily) · CRO environment · Remote</div>
+          <ul>
+            <li>Designed and delivered a <b>7-module GxP and regulatory affairs training course</b> for 30+ interns, and coordinated 5+ webinars for a 100+ member professional network.</li>
+            <li>QC-checked PV case documentation against <b>ICH E2B(R3)</b> and MedDRA, authored a pharmacovigilance SOP for case-intake software, and drafted a weekly regulatory-intelligence newsletter on FDA, EMA, and ICH updates.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-row rv">
+        <div class="when">Jun 2022 - Aug 2022</div>
+        <div>
+          <div class="role">Quality Assurance Trainee</div>
+          <div class="org">Symbiotec Pharma Labs · Indore, India</div>
+          <ul>
+            <li>Tracked <b>15+ change control and CAPA records</b> in QMS workflows per 21 CFR 210/211, and supported 5+ quality audits, reconciling 20+ deviation records.</li>
+            <li>Reviewed batch manufacturing and validation records for a commercial steroidal product, applying <b>ALCOA+ data integrity</b> principles under QA supervision.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section class="blk" id="leadership">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="eyebrow">Annex · Service</div>
+      <h2>Leading where I <em>study.</em></h2>
+      <p>Regulatory work is representation work, speaking for people who are not in the room. I do it on campus too.</p>
+    </div>
+    <div class="lead">
+      <div class="lcard feat rv">
+        <div class="ld-role">Vice President, Academic Affairs</div>
+        <div class="ld-org">Graduate Student Government · Northeastern · Executive Board</div>
+        <p>Elected officer chairing the Academic Affairs Committee and serving as primary liaison between 9 graduate colleges, the Provost's office, and Deans on academic policy, fellowship strategy, and institutional growth.</p>
+        <ul>
+          <li>Recruit, interview, hire, and manage <b>20+ graduate senators</b> across all 9 colleges through an 8-initiative reform platform.</li>
+          <li>Serve on university planning committees including <b>RISE and NIH Panel</b> initiatives, partnering with research and operations leadership.</li>
+          <li>Partner with university leadership and the <b>Board of Trustees</b>, and facilitate resolution of graduate academic grievances and TA/RA complaints.</li>
+        </ul>
+        <div class="statrow">
+          <div class="st"><div class="n">7,000+</div><div class="l">Students represented</div></div>
+          <div class="st"><div class="n">9</div><div class="l">Colleges</div></div>
+          <div class="st"><div class="n">20+</div><div class="l">Senators led</div></div>
+          <div class="st"><div class="n">8</div><div class="l">Initiatives</div></div>
+        </div>
+      </div>
+      <div class="lcard plain rv d1">
+        <div class="ld-role">Ex-Director, Programs &amp; Operations</div>
+        <div class="ld-org">Regulatory Affairs Student Organization · Northeastern</div>
+        <p>Planned regulatory networking events and speaker sessions, and produced the media and engagement content, newsletters, social, and visuals, that grew the organization's student and professional community.</p>
+        <ul>
+          <li>Ran <b>speaker sessions and networking events</b> connecting students with industry.</li>
+          <li>Built newsletter, social, and visual content as <b>Media &amp; Engagement Coordinator</b>.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="blk">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="eyebrow">Capabilities</div>
+      <h2>What I bring to the <em>filing.</em></h2>
+    </div>
+    <div class="caps rv d1">
+      <div class="cap"><h4>Submissions</h4><ul><li>eCTD &amp; CTD modules</li><li>IND · ANDA · NDA</li><li>DMF (Type II)</li><li>Lifecycle · CBE-0/30 · PAS</li></ul></div>
+      <div class="cap"><h4>Quality</h4><ul><li>cGMP · GxP</li><li>CAPA · deviation · NC</li><li>RCA · FMEA · OOS/OOT</li><li>ALCOA+ · 21 CFR Part 11</li></ul></div>
+      <div class="cap"><h4>Clinical &amp; Safety</h4><ul><li>ICH-GCP E6(R2)</li><li>21 CFR Part 50 · IRB</li><li>Informed consent design</li><li>Pharmacovigilance · E2B(R3) · MedDRA</li></ul></div>
+      <div class="cap"><h4>Tools &amp; Intelligence</h4><ul><li>Veeva Vault RIM · TrackWise</li><li>eCTD publishing</li><li>Excel · Tableau · Power BI</li><li>Regulatory &amp; competitive intelligence</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- RECOGNITION -->
+<section class="blk">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="eyebrow">On file · The record</div>
+      <h2>By the <em>numbers.</em></h2>
+    </div>
+    <div class="rec rv d1">
+      <div class="item"><div class="big" data-count="4.00">0</div><div class="lab">Graduate GPA</div></div>
+      <div class="item"><div class="big" data-count="7" data-suffix="+">0</div><div class="lab">Conferences presented</div></div>
+      <div class="item"><div class="big" data-count="60" data-suffix="+">0</div><div class="lab">Lifecycle documents reviewed</div></div>
+      <div class="item"><div class="big" data-count="10" data-suffix="+">0</div><div class="lab">FDA CMC query responses</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="wrap">
+  <section class="contact rv" id="contact">
+    <span class="ring r1"></span><span class="ring r2"></span>
+    <div class="eyebrow">Correspondence · Reply requested</div>
+    <h2>Let's build something that <em>gets approved.</em></h2>
+    <p class="sub">Open to regulatory, compliance, consulting, and quality management roles, and always up for a conversation about CMC, clinical documentation, or healthcare compliance.</p>
+    <div class="cgrid">
+      <a href="mailto:shukla.tanm@northeastern.edu"><span class="ck">Email · University</span><span class="cv">shukla.tanm@northeastern.edu</span></a>
+      <a href="mailto:tshukla245@gmail.com"><span class="ck">Email · Personal</span><span class="cv">tshukla245@gmail.com</span></a>
+      <a href="#top"><span class="ck">Based · Ready to relocate</span><span class="cv">Boston, MA</span></a>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap foot">
+    <span>TANMAY ARUN SHUKLA · REGULATORY AFFAIRS</span>
+    <span>COMPILED IN BOSTON · STATUS ● OPEN</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce) document.body.classList.add('flat');
+
+  var nav = document.getElementById('nav');
+  function navScroll(){ nav.classList.toggle('scrolled', window.scrollY > 12); }
+  window.addEventListener('scroll', navScroll, {passive:true}); navScroll();
+
+  var revs = [].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window && !reduce){
+    var io = new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} }); }, {threshold:.14, rootMargin:'0px 0px -8% 0px'});
+    revs.forEach(function(e){ io.observe(e); });
+  } else { revs.forEach(function(e){ e.classList.add('in'); }); }
+
+  var counters = [].slice.call(document.querySelectorAll('[data-count]'));
+  function runCount(el){
+    var target = parseFloat(el.getAttribute('data-count'));
+    var suffix = el.getAttribute('data-suffix') || '';
+    var dec = (target % 1 !== 0) ? 2 : 0;
+    if(reduce){ el.textContent = target.toFixed(dec)+suffix; return; }
+    var t0=null, dur=1200;
+    (function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1); var e=1-Math.pow(1-p,3); el.textContent=(target*e).toFixed(dec)+suffix; if(p<1) requestAnimationFrame(step); })();
+  }
+  if('IntersectionObserver' in window && !reduce){
+    var cio = new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ runCount(en.target); cio.unobserve(en.target);} }); }, {threshold:.6});
+    counters.forEach(function(e){ cio.observe(e); });
+  } else { counters.forEach(runCount); }
+
+  /* project filter */
+  var fchips = [].slice.call(document.querySelectorAll('.fchip'));
+  var pcards = [].slice.call(document.querySelectorAll('.pcard'));
+  fchips.forEach(function(c){
+    c.addEventListener('click', function(){
+      fchips.forEach(function(x){ x.classList.remove('on'); });
+      c.classList.add('on');
+      var f = c.getAttribute('data-f');
+      pcards.forEach(function(card){
+        var show = (f==='all') || (card.getAttribute('data-cat')===f);
+        card.classList.toggle('gone', !show);
+      });
+    });
+  });
+
+  /* beats + scroll */
+  var ascent = document.getElementById('ascent');
+  var beatEls = [].slice.call(document.querySelectorAll('.beat'));
+  var dots = [].slice.call(document.querySelectorAll('.progress span'));
+  var modKeys = ['m1','m2','m3','m4','m5'];
+  var curBeat = 0, scrollP = 0;
+  function updateBeats(){
+    if(reduce) return;
+    var r = ascent.getBoundingClientRect();
+    var total = ascent.offsetHeight - window.innerHeight;
+    var p = total>0 ? (-r.top/total) : 0;
+    p = Math.max(0, Math.min(1, p));
+    scrollP = p;
+    var beat = Math.min(beatEls.length-1, Math.floor(p * beatEls.length));
+    if(beat !== curBeat){
+      curBeat = beat;
+      beatEls.forEach(function(b,i){ b.classList.toggle('show', i===beat); });
+      dots.forEach(function(d,i){ d.classList.toggle('on', i===beat); });
+      if(window.__setTier) window.__setTier(beat===0 ? null : modKeys[beat-1]);
+    }
+  }
+  window.addEventListener('scroll', updateBeats, {passive:true});
+  window.addEventListener('resize', updateBeats);
+  updateBeats();
+
+  /* 3D pyramid */
+  var canvas = document.getElementById('pyr');
+  var hasWebGL = (function(){ try{ var c=document.createElement('canvas'); return !!(window.WebGLRenderingContext && (c.getContext('webgl')||c.getContext('experimental-webgl'))); }catch(e){ return false; } })();
+  if(!hasWebGL || typeof THREE === 'undefined'){
+    canvas.style.display='none';
+    var fb=document.getElementById('fallback'); fb.style.display='grid';
+    fb.innerHTML='<svg viewBox="0 0 240 210" width="78%"><g fill="rgba(11,92,66,.07)" stroke="#0B5C42" stroke-width="1.5">'+
+      '<path d="M120 14 L150 56 L90 56 Z"/><path d="M88 62 L152 62 L168 102 L72 102 Z"/>'+
+      '<path d="M70 108 L170 108 L186 148 L54 148 Z"/><path d="M52 154 L188 154 L200 188 L40 188 Z"/>'+
+      '<rect x="34" y="192" width="172" height="3" rx="1.5"/></g></svg>';
+    return;
+  }
+  var renderer = new THREE.WebGLRenderer({canvas:canvas, antialias:true, alpha:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1, 2));
+  var scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera(32, 1, 0.1, 100);
+  camera.position.set(0, 0.3, 9); camera.lookAt(0,0,0);
+  scene.add(new THREE.AmbientLight(0xffffff, 0.82));
+  var key = new THREE.DirectionalLight(0xffffff, 0.7); key.position.set(-4,6,6); scene.add(key);
+  var rim = new THREE.PointLight(0x27C08A, 0.8, 40); rim.position.set(5,-1,5); scene.add(rim);
+  var group = new THREE.Group(); scene.add(group);
+  var tierDefs = [
+    {key:'m1', rB:2.12, rT:2.04, h:0.30, color:0x0B5C42},
+    {key:'m5', rB:1.98, rT:1.60, h:0.52, color:0x117A57},
+    {key:'m4', rB:1.54, rT:1.16, h:0.52, color:0x159C6C},
+    {key:'m3', rB:1.10, rT:0.72, h:0.52, color:0x1FB07C},
+    {key:'m2', rB:0.68, rT:0.05, h:0.66, color:0x35D29A}
+  ];
+  var gap=0.075, total=tierDefs.reduce(function(s,t){return s+t.h;},0)+gap*(tierDefs.length-1), y=-total/2;
+  var tiers={}, meshes=[];
+  tierDefs.forEach(function(d){
+    var geo=new THREE.CylinderGeometry(d.rT,d.rB,d.h,4,1);
+    var mat=new THREE.MeshStandardMaterial({color:d.color,transparent:true,opacity:0.16,roughness:0.3,metalness:0.08,emissive:d.color,emissiveIntensity:0.1});
+    var mesh=new THREE.Mesh(geo,mat); mesh.position.y=y+d.h/2;
+    var edge=new THREE.LineSegments(new THREE.EdgesGeometry(geo), new THREE.LineBasicMaterial({color:d.color,transparent:true,opacity:0.78}));
+    mesh.add(edge);
+    mesh.userData={key:d.key,base:0.16,baseEmis:0.1,edgeMat:edge.material,targetOp:0.16,targetEmis:0.1,targetEdge:0.78,targetScale:1};
+    group.add(mesh); tiers[d.key]=mesh; meshes.push(mesh); y+=d.h+gap;
+  });
+  var baseTilt=-0.26; group.rotation.x=baseTilt; group.rotation.y=0.5;
+  window.__setTier=function(k){
+    meshes.forEach(function(m){
+      var on=(m.userData.key===k);
+      m.userData.targetOp=on?0.5:m.userData.base;
+      m.userData.targetEmis=on?0.55:m.userData.baseEmis;
+      m.userData.targetEdge=on?1:0.78;
+      m.userData.targetScale=on?1.06:1;
+    });
+  };
+  var mx=0,my=0,tmx=0,tmy=0;
+  window.addEventListener('pointermove',function(e){ if(e.pointerType&&e.pointerType!=='mouse')return; tmx=(e.clientX/window.innerWidth-0.5)*2; tmy=(e.clientY/window.innerHeight-0.5)*2; });
+  function resize(){ var r=canvas.getBoundingClientRect(); var w=Math.max(1,r.width),h=Math.max(1,r.height); renderer.setSize(w,h,false); camera.aspect=w/h; camera.updateProjectionMatrix(); }
+  resize(); window.addEventListener('resize',resize);
+  var TWO=Math.PI*2;
+  function animate(){
+    requestAnimationFrame(animate);
+    mx+=(tmx-mx)*0.05; my+=(tmy-my)*0.05;
+    var ty=0.5+scrollP*TWO+mx*0.35, tx=baseTilt+my*0.16;
+    if(reduce){ ty=0.6; tx=baseTilt; }
+    group.rotation.y+=(ty-group.rotation.y)*0.08;
+    group.rotation.x+=(tx-group.rotation.x)*0.08;
+    meshes.forEach(function(m){
+      var u=m.userData;
+      m.material.opacity+=(u.targetOp-m.material.opacity)*0.1;
+      m.material.emissiveIntensity+=(u.targetEmis-m.material.emissiveIntensity)*0.1;
+      u.edgeMat.opacity+=(u.targetEdge-u.edgeMat.opacity)*0.1;
+      var s=m.scale.x+(u.targetScale-m.scale.x)*0.12; m.scale.set(s,1,s);
+    });
+    renderer.render(scene,camera);
+  }
+  animate();
+  if(!reduce){ group.scale.set(0.62,0.62,0.62); var s0=performance.now(); (function pop(now){ var p=Math.min((now-s0)/1000,1); var e=1-Math.pow(1-p,3); var s=0.62+0.38*e; group.scale.set(s,s,s); if(p<1) requestAnimationFrame(pop); })(s0); }
+})();
+</script>
+</body>
+</html>
