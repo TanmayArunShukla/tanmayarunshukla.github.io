@@ -564,9 +564,11 @@
     var target = parseFloat(el.getAttribute('data-count'));
     var suffix = el.getAttribute('data-suffix') || '';
     var dec = (target % 1 !== 0) ? 2 : 0;
+    if(isNaN(target)) target = 0;
     if(reduce){ el.textContent = target.toFixed(dec)+suffix; return; }
     var t0=null, dur=1200;
-    (function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1); var e=1-Math.pow(1-p,3); el.textContent=(target*e).toFixed(dec)+suffix; if(p<1) requestAnimationFrame(step); })();
+    function step(ts){ if(t0===null) t0=ts; var p=Math.min((ts-t0)/dur,1); var e=1-Math.pow(1-p,3); el.textContent=(target*e).toFixed(dec)+suffix; if(p<1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
   }
   if('IntersectionObserver' in window && !reduce){
     var cio = new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ runCount(en.target); cio.unobserve(en.target);} }); }, {threshold:.6});
